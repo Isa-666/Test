@@ -1,0 +1,50 @@
+ @font-face {
+   font-family: Euclid;
+   src: url(./Fonts/EuclidSquare-Medium.woff2);
+ }
+
+ * {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-family: Euclid;
+ }
+ body{
+  height: 2800px;
+ }
+
+
+ input {
+   outline: none;
+ }
+
+
+ li {
+   list-style: none;
+   font-size: 14px;
+   cursor: pointer;
+   color: hsla(0, 0%, 31%, 1);
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   transform-origin: bottom;
+ }
+
+ li:hover {
+   animation-name: li;
+   animation-timing-function: ease;
+   font-size: 17px;
+ }
+
+ @keyframes li {
+   0% {
+     transform: translateY(0);
+   }
+
+   50% {
+     transform: translateY(-8px);
+   }
+
+   100% {
+     transform: translateY(0);
+   }
+ }

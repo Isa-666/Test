@@ -1,0 +1,26 @@
+.sponsori{
+    height: 80px;
+width: 176px;
+background-color: white;
+border-radius: 8px;
+display: flex;
+justify-content: center;
+cursor: pointer;
+}
+.sponsori>img{
+    height: 56px;
+width: 128px;
+margin-top: 10px;
+}
+.sponsor_container{
+    margin-top: 50px;
+}
+
+.footer_slider_container{
+    height: 216px;
+width: 1520px;
+background: hsla(240, 11%, 96%, 1);
+margin-top: 60px;
+padding-right: 50px;
+padding-left: 50px;
+}

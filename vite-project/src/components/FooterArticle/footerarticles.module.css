@@ -1,0 +1,29 @@
+
+.footer_article_container{
+    height: 200px;
+width: 286px;
+display: flex;
+flex-direction: column;
+text-align: center;
+gap: 10px;
+justify-content: space-between;
+}
+.title{
+    font-size: 20px;
+    font-weight: 500;
+    color: hsla(0, 0%, 20%, 1);
+
+}
+.text{
+
+font-size: 15px;
+font-weight: 400;
+color: hsla(0, 0%, 20%, 1);
+
+
+}
+.info_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
