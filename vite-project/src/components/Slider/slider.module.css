@@ -1,8 +1,55 @@
-.phone_img{
-    height: 652px;
-    width: max-content;
-    
+.phone_img {
+  height: 652px;
+  width: max-content;
 }
-.pictures{
-    width: 100%;
+.bg_phones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  height: 652px;
+}
+
+.buy_sell_text {
+  font-size: 48px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 30px;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.another_text {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  width: 600px;
+}
+@media only screen and (max-width: 390px) {
+  .bg_phones {
+    display: flex;
+width: 100%;
+    margin-top: 100px;
+    height: 500px;
+    flex-direction: column-reverse;
+  }
+
+  .buy_sell_text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+    margin-left: 0px;
+    margin-top: -30px;
+  
+  }
+
+  .another_text {
+    text-align: center;
+    width: 350px;
+  }
 }
