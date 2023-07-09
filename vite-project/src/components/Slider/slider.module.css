@@ -4,6 +4,7 @@
 }
 .bg_phones {
   display: flex;
+  position: relative;
   justify-content: space-between;
   margin-top: 100px;
   height: 652px;

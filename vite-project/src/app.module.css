@@ -8,10 +8,9 @@
   padding: 0;
   border: 0;
   font-family: Euclid;
+
 }
-body {
-  height: 2800px;
-}
+
 
 input {
   outline: none;
@@ -19,9 +18,14 @@ input {
 
 li {
   list-style: none;
+  text-decoration: none;
   font-size: 14px;
-  cursor: pointer;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   transform-origin: bottom;
+}
+@media only screen and (max-width: 390px){
+  body{
+    overflow-x: hidden;
+  }
 }

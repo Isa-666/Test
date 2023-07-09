@@ -1,0 +1,29 @@
+.search_image_product{
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    }
+    .search_results{
+        display: flex;
+        gap: 20px;
+    }
+    .name_and_price{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+    .search_results{
+        display: flex;
+        cursor: pointer;
+        color: #192038;
+    }
+    .product_link_style{
+        text-decoration: none;
+    }
+    .asd{
+   
+        color: #192038;
+        
+    }

@@ -9,6 +9,7 @@ import location from "./assets/location.png";
 import call from "./assets/call.png";
 import email from "./assets/mail.png";
 import copyright from "./assets/copyright.png";
+import { Link } from "react-router-dom";
  const Footer = () => {
   return (
     <div className={styles.footer_container}>
@@ -57,9 +58,10 @@ import copyright from "./assets/copyright.png";
             <span>Kömək</span>
             <div>
               <ul className={styles.menu_section}>
-                <li className={styles.menu_faq}>Tez-tez soruşulan suallar</li>
-                <li className={styles.menu_faq}>Çatdırılma xidməti</li>
+                <li className={styles.menu_faq}><Link className={styles.menu_faq} to="/FAQ">Tez-tez soruşulan suallar</Link></li>
+            <li className={styles.menu_faq}>Çatdırılma xidməti</li>
                 <li className={styles.menu_faq}>Geri qaytarılma şərtləri</li>
+                <li className={styles.menu_faq}><Link to="/About Us" className={styles.menu_faq}>Haqqımızda</Link></li>
               </ul>
             </div>
           </div>

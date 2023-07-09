@@ -138,12 +138,26 @@
   display: flex;
   justify-content: center;
 }
+
+.productMoreSold{
+  text-decoration: none;
+  color: hsla(0, 0%, 20%, 1);
+}
+.New_Products{
+  text-decoration: none;
+  color: hsla(0, 0%, 20%, 1);
+}
+.new_accessories{
+  text-decoration: none;
+  color: hsla(0, 0%, 20%, 1);
+}
 @media only screen and (max-width: 390px) {
   .watch_all_section {
     display: none;
   }
   .cardProduct_container {
     overflow: scroll;
+    
   }
   .cardProduct_container::-webkit-scrollbar {
     display: none;
@@ -246,4 +260,5 @@
     align-items: center;
     gap: 30px;
   }
+
 }

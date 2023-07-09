@@ -1,0 +1,44 @@
+.card_container {
+    height: 386px;
+    width: 286px;
+    box-shadow: 0px 4px 8px 0px hsla(0, 0%, 64%, 0.08);
+    background: hsla(0, 0%, 100%, 1);
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .card_container:hover {
+    transition: all 0.2s ease-in;
+    transform: scale(1.12);
+  }
+
+  .img_mobile {
+    height: 210px;
+    width: 189px;
+    margin-top: 30px;
+    margin-left: 45px;
+  }
+  .product_info {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 190px;
+    text-align: left;
+    color: hsla(0, 0%, 20%, 1);
+  }
+.product_info_con{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.product_price{
+    text-align: left;
+    margin-left: 40px;
+    display: flex;
+    gap: 10px;
+}
+.product_link_style{
+  text-decoration: none;
+}

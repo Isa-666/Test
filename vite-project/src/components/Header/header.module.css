@@ -5,9 +5,6 @@
   padding-right: 80px;
   align-items: center;
 }
-.menu{
-  display: none;
-}
 
 .header_container {
   width: 100%;
@@ -18,8 +15,8 @@
 .logo {
   height: 70px;
   width: 154px;
+  cursor: pointer;
 }
-
 
 .search_input_container {
   background: linear-gradient(0deg, #e0e0e0, #e0e0e0),
@@ -33,13 +30,26 @@
   gap: 10px;
   padding-left: 10px;
 }
-
+.input_products_filter {
+height: auto;
+position: absolute;
+padding-left: 10px;
+padding-top: 10px;
+z-index: 10;
+  width: 620px;
+}
+.results_section{
+  display: flex;
+justify-content: space-between;
+}
 .search_icon {
   color: hsla(0, 0%, 51%, 1);
   height: 13px;
   width: 13px;
 }
-
+.icon_link_style path {
+  fill: hsla(0, 0%, 20%, 1);
+}
 .search_input {
   height: 36px;
   width: 591px;
@@ -64,6 +74,8 @@
   height: 17px;
   width: 20px;
   cursor: pointer;
+  text-decoration: none;
+  color: rgb(22, 22, 22);
 }
 
 .icon:hover {
@@ -91,28 +103,80 @@
   display: flex;
   justify-content: space-between;
 }
-.products_name:hover {
-  animation-name: li;
-  animation-timing-function: ease;
-  font-size: 17px;
+.products_name {
+  text-decoration: none;
+  color: hsla(0, 0%, 20%, 1);
+}
+.category_name {
+  cursor: pointer;
+}
+.products_name:focus {
+  color: red;
+}
+.active {
+  background-color: rgb(255, 255, 255);
+  width: 94.7%;
+  height: 300px;
+  z-index: 2;
+  visibility: visible;
+  position: absolute;
+  padding: 50px;
+  margin-top: 20px;
+  margin-left: 0px;
+  display: flex;
 }
 
-@keyframes li {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+.category_container {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-
-@media only screen and (max-width: 390px){
-
+.category_name:hover {
+  color: red;
+  text-decoration: underline;
+}
+.subcategory_section {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+.category_name {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.inactive {
+  display: none;
+}
+.mobile_hamburger {
+  display: none;
+}
+.search_image_product{
+width: 70px;
+height: 70px;
+}
+.pro_container{
+  display: flex;
+  background-color: white;
+  padding: 20px;
+}
+.name_and_price{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.products_search_filter_active{
+display: block;
+}
+.products_search_filter_inactive{
+  display: none;
+}
+.cart_link{
+  text-decoration: none;
+}
+@media only screen and (max-width: 390px) {
   .header_container {
     height: 130px;
     width: 100%;
@@ -120,34 +184,31 @@
   }
   .icon:hover {
     transform: translateY(-3px);
-    box-shadow: inset 0px 0px 0px 0px ;
+    box-shadow: inset 0px 0px 0px 0px;
     transition: all 300ms ease;
-
   }
-  .circle{
+  .circle {
     margin-left: -10px;
-
   }
   .icon {
     height: 35px;
     width: 25px;
     cursor: pointer;
   }
-  .menu{
+  .menu {
     cursor: pointer;
-position: absolute;
-margin-top: -5px;
-margin-left: 10px;
-width: 25px;
-height: 15px;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 10px;
+    width: 25px;
+    height: 15px;
   }
-  .user_favorite_shop_icons_section{
-    margin-left: -100px;
+  .user_favorite_shop_icons_section {
+    margin-left: -130px;
     margin-top: -30px;
-   
   }
 
-  .logo{
+  .logo {
     margin-left: 50px;
     margin-top: -30px;
   }
@@ -158,9 +219,8 @@ height: 15px;
     padding-left: 0px;
     padding-right: 0px;
     width: 200px;
-
   }
- 
+
   .search_input {
     height: 36px;
     width: 288px;
@@ -172,7 +232,7 @@ height: 15px;
   }
 
   .products_container {
- display: none;
+    display: none;
   }
 
   .search_input_container {
@@ -194,5 +254,21 @@ height: 15px;
     height: 20px;
     width: 20px;
   }
-
+  .bread_container {
+    margin-left: 20px;
+  }
+  .mobile_hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  .hamburger_logo {
+    width: 25px;
+    height: 25px;
+  }
+  .category_container {
+    display: none;
+  }
 }

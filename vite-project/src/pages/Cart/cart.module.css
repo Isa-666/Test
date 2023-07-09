@@ -1,0 +1,38 @@
+.basket_count{
+font-size: 20px;
+font-weight: 500;
+}
+.product_container{
+    width: 100%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    margin-top: 50px;
+   align-items: center;
+   justify-content: center;
+}
+.cart_container{
+    background-color: rgb(246, 241, 241);
+    padding: 50px;
+}
+.empty_cart{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.empty_cart > span{
+    color: rgb(215, 207, 207);
+}
+.shopsLogo{
+    width: 100px;
+    height: 100px;
+}
+.go_back_shop{
+    background-color: rgb(14, 198, 14);
+    width: 280px;
+height: 48px;
+border-radius: 8px;
+color: white;
+cursor: pointer;
+}

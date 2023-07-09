@@ -1,0 +1,10 @@
+.results_container{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    margin-top: -10px;
+    margin-left: -10px;
+    gap: 30px;
+    border-radius: 6px;
+
+}
