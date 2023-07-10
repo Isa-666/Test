@@ -9,6 +9,7 @@ export default function useFetch(url) {
   const [AccessoriesProducts, setAccessoriesProducts] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [productArticle,setProductArticle]=useState([]);
 
   const asyncFunction = async () => {
     const { data: product} = await commerce.products.list();
@@ -17,6 +18,9 @@ export default function useFetch(url) {
       category_slug: ["moresold"],
       limit: 4,
     });
+    const {data: twoArticleProducts}= await commerce.products.list({
+      category_slug:["two-articles"]
+    })
 
     const { data: productsNewSold } = await commerce.products.list({
       category_slug: ["newproducts"],
@@ -36,11 +40,13 @@ export default function useFetch(url) {
       limit: 4,
     });
 setProducts(product)
-    setAccessoriesProducts(Accessories);
-    setNewAccessories(newAccessoriesProducts);
-    setProductsMoreSold(productsMoreSold);
-    setNewProducts(productsNewSold);
-    setMobileDevices(MobilePhones);
+setAccessoriesProducts(Accessories);
+setNewAccessories(newAccessoriesProducts);
+setProductsMoreSold(productsMoreSold);
+setNewProducts(productsNewSold);
+setMobileDevices(MobilePhones);
+setProductArticle(twoArticleProducts);
+
     try {
       setLoading(true);
     } catch (err) {
@@ -63,6 +69,7 @@ setProducts(product)
     newAccessories,
     MobileDevices,
     AccessoriesProducts,
-    products
+    products,
+    productArticle
   };
 }

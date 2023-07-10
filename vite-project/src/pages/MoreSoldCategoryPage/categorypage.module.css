@@ -324,5 +324,26 @@ padding-top: 20px;
   }
 }
 
-
+@media only screen and (max-width: 390px) {
+  .filter_fundament {
+    padding-top: 50px;
+    margin-top: 100px;
+  
+    display: none;
+    padding-bottom: 50px;
+  }
+.products_counts{
+  display: none;
+}
+.mobile_filter_container{
+  display: none;
+}
+.category_container{
+  padding-top: 30px;
+}
+.mobile_product_filter{
+  display: flex;
+ flex-wrap: wrap;
+}
+}
 

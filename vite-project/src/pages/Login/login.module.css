@@ -195,7 +195,7 @@ width: 100%;
   flex-direction: column;
   height: 200px;
   width: 350px;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 .girl_with_phone{
   display: none;
@@ -203,12 +203,7 @@ width: 100%;
 .dots_image{
 display: none;
 }
-.input_section_container{
-  margin-left: 0px;
-  padding-left: 40px;
-  margin-top: 50px;
 
-}
 .input_section_container{
   margin-left: 30px;
   padding-left: 0px;
@@ -221,5 +216,11 @@ margin-left: 35px;
 }
 .image_section{
   padding-bottom: 20px;
+}
+.input_section{
+  margin-left: -15px;
+}
+.enter_account{
+  margin-left: 10px;
 }
 }

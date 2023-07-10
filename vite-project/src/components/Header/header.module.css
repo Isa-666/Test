@@ -86,12 +86,13 @@ justify-content: space-between;
 }
 
 .circle {
-  background: hsla(144, 64%, 50%, 1);
+  background: rgb(255, 2, 2);
   height: 19px;
   width: 20px;
-  color: white;
+  color: rgb(255, 255, 255);
   border-radius: 50%;
   text-align: center;
+  font-size: 13px;
   cursor: default;
 }
 .products_container {
@@ -179,7 +180,7 @@ display: block;
 @media only screen and (max-width: 390px) {
   .header_container {
     height: 130px;
-    width: 100%;
+    width: 380px;
     border-bottom: 1px solid hsla(144, 64%, 50%, 1);
   }
   .icon:hover {
@@ -204,7 +205,7 @@ display: block;
     height: 15px;
   }
   .user_favorite_shop_icons_section {
-    margin-left: -130px;
+    margin-left: -100px;
     margin-top: -30px;
   }
 
@@ -242,7 +243,7 @@ display: block;
     height: 40px;
     width: 298px;
     margin-top: 80px;
-    margin-left: -150px;
+    margin-left: -170px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,6 +264,8 @@ display: block;
     position: absolute;
     margin-top: 30px;
     margin-left: 10px;
+    width: 50px;
+    height: 50px;
   }
   .hamburger_logo {
     width: 25px;
@@ -271,4 +274,15 @@ display: block;
   .category_container {
     display: none;
   }
+  .input_products_filter {
+    height: auto;
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 10px;
+    z-index: 10;
+margin-left: -200px;
+      width: 340px;
+   
+    }
+
 }

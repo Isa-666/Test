@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import {Grid} from "@material-ui/core"
 import ProductItem from '../../ProductItem/ProductItem'
 import styles from "./newaccessoriesproducts.module.css"

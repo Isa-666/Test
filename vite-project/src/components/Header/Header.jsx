@@ -37,6 +37,7 @@ const Header = () => {
     getResult(value);
   }
 
+
   return (
     <div className={styles.header_container}>
       <div className={styles.mobile_hamburger}>
@@ -44,7 +45,7 @@ const Header = () => {
       </div>
       <div className={styles.header_first_section_container}>
         <div className={styles.logo_container}>
-          <Link to={"/"}>
+          <Link  to={"/"}>
             <img className={styles.logo} src={logo} alt="" />
           </Link>
         </div>

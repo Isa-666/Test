@@ -24,8 +24,8 @@ li {
   animation-iteration-count: infinite;
   transform-origin: bottom;
 }
-@media only screen and (max-width: 390px){
+@media only screen and (max-width: 390px) {
   body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
 }

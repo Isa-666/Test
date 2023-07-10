@@ -6,6 +6,8 @@
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
+    -webkit-animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
   .card_container:hover {
     transition: all 0.2s ease-in;
@@ -41,4 +43,33 @@
 }
 .product_link_style{
   text-decoration: none;
+}
+.ty{
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+@-webkit-keyframes fade-in-bck {
+  0% {
+    -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bck {
+  0% {
+    -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
 }

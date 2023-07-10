@@ -37,8 +37,7 @@ const {productsMoreSold}=useFetch(commerce)
               onClick={() => {
                 setFirstOpen(!firstopen);
               }}
-              className={styles.filter_brand_text}
-            >
+              className={styles.filter_brand_text}>
               Brand
               {firstopen ? (
                 <AiOutlineMinus className={styles.plusIcon} />
@@ -181,7 +180,7 @@ const {productsMoreSold}=useFetch(commerce)
           </span>
         </div>
         <div className={styles.category_container}>
-          <ProductMoreSold/>
+          <ProductMoreSold customClass={styles.mobile_product_filter}/>
         </div>
       </div>
     </div>

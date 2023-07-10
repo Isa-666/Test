@@ -4,8 +4,9 @@ import SearchResults from '../SearchResults/SearchResults'
 const SearchResultList = ({results, handleChange}) => {
   return (
     <div className={styles.results_container}>
+      
 {results.map((product)=>{ 
-    return <div key={product.id}><SearchResults handleChange={handleChange} product={product}/></div>
+    return <div className={styles.SearchResultsAnimation} key={product.id}><SearchResults handleChange={handleChange} product={product}/></div>
 })}</div>
   )
 }

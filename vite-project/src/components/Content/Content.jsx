@@ -21,6 +21,23 @@ import useFetch from "../../hooks/useFetch";
 
 const Content = () => {
   const { MobileDevices, AccessoriesProducts } = useFetch(commerce);
+  const { products } = useFetch(commerce);
+  const [cart, setCart] = useState({});
+
+  const fetchCart = async () => {
+    setCart(await commerce.cart.retrieve());
+  };
+
+  const handleAddToCart = async (productId, quantity) => {
+    const item = await commerce.cart.add(productId, quantity);
+    setCart(item.cart);
+  };
+
+  useEffect(() => {
+    fetchCart();
+  }, []);
+
+
 
   return (
     <div className={styles.fundament}>
@@ -33,12 +50,13 @@ const Content = () => {
             </div>
           </Link>
         </div>
-
         <div className={styles.cardProduct_container}>
           <ProductsMoreSold />
         </div>
         <div className={styles.watch_all_section_mobile}>
+          <Link className={styles.productMoreSold} to={"/MoreSoldCategories"}>
           Hamısına bax <span>{">"}</span>
+          </Link>
         </div>
         <div className={styles.content_two_section}>
           <div>Yeni gələn məhsullar</div>
@@ -50,39 +68,21 @@ const Content = () => {
           </Link>
         </div>
         <div className={styles.cardProduct_container}>
-          <NewProducts />
+          <NewProducts/>
         </div>
         <div className={styles.watch_all_section_mobile}>
-          Hamısına bax <span>{">"}</span>
+          <Link to={"/NewProductsCategories"} className={styles.New_Products}>
+          Hamısına bax <span>{">"}</span></Link>
         </div>
         <div className={styles.product_article_container}>
-          <ProductArticle
-            CustomClass={styles.product_article}
-            TextClass={styles.product_article_text}
-            image={phone4}
-            price={"1519 AZN"}
-            title={"iPhone 11.Rəngli.Güclü.Əsl sizə lazım olan."}
-            percentages
-            percentagesTitle={"Faizsiz taksitlə 127 AZN-dən"}
-          />
-          <ProductArticle
-            AppleText
-            CustomClass={styles.product_article_sec}
-            TextClass={styles.product_article_sec_text}
-            MobileClass={styles.mobile_version}
-            image={phone3}
-            price={"79 AZN-dən*"}
-            title={`Əşyalarınızı tapmağın super asan yolu.`}
-          />
+          <ProductArticle AddToCart={handleAddToCart} />
         </div>
-
         <div className={styles.content_two_section}>
           <div>Yeni gələn aksessuarlar</div>
           <Link
             to={"/NewAccessoriesCategories"}
             className={styles.new_accessories}
           >
-           
             <div className={styles.watch_all_section}>
               Hamısına bax <span>{">"}</span>
             </div>
@@ -92,7 +92,8 @@ const Content = () => {
           <NewAccessoriesProducts />
         </div>
         <div className={styles.watch_all_section_mobile}>
-          Hamısına bax <span>{">"}</span>
+          <Link className={styles.new_accessories} to={"/NewAccessoriesCategories"}>
+          Hamısına bax <span>{">"}</span></Link>
         </div>
         <div className={styles.more_articles_container}>
           <MoreArticles
@@ -104,11 +105,11 @@ const Content = () => {
           />
           <div className={styles.aside_articles_container}>
             <MoreArticles
-              productsNumbers={10}
+              productsNumbers={products.length}
               imageClass={styles.aside_first_articles_image}
               image={article_pic2}
               CustomClass={styles.aside_first_articles_container}
-              title={"Smart Saat"}
+              title={"Məhsullar"}
             />
             <MoreArticles
               productsNumbers={AccessoriesProducts.length}

@@ -7,6 +7,10 @@
   border: 1px solid rgb(157, 157, 157);
   cursor: pointer;
 }
+.productArticle_container {
+  display: flex;
+  justify-content: space-between;
+}
 
 @keyframes bounce {
   0%,
@@ -54,6 +58,12 @@
   width: 20px;
   height: 20px;
 }
+.moonLoader {
+  display: flex;
+justify-content: space-between;
+  padding: 10px;
+  padding-bottom: 20px;
+}
 @media only screen and (max-width: 390px) {
   .product_article_image > img {
     width: 120px;
@@ -66,5 +76,17 @@
   .product_article_image {
     padding-right: 0px;
   }
-  
+  .productArticle_container{
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+    margin-left: 20px;
+  }
+  .moonLoader {
+    display: flex;
+gap: 50px;
+  flex-direction: column;
+    padding: 10px;
+    padding-bottom: 20px;
+  }
 }

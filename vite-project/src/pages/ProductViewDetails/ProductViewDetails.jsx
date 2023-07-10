@@ -5,9 +5,9 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { BsFillStarFill } from "react-icons/bs";
 import plusQuantity from "./assets/pluslogo.png";
 import minusQuantity from "./assets/minuslogo.png";
-import { CgShoppingCart } from "react-icons/cg";
+import { CgLogIn, CgShoppingCart } from "react-icons/cg";
 import Comment from "../../components/comment/Comment";
-import { render } from "react-dom";
+import useFetch from "../../hooks/useFetch";
 const ProductViewDetails = () => {
   const [productDetail, setProductDetail] = useState({});
   const [slideIndex, setSlideIndex] = useState(1);
@@ -15,9 +15,11 @@ const ProductViewDetails = () => {
   const [hover, setHover] = useState(null);
   const [characteristics, setCharacteristics] = useState(false);
   const [comments, setComments] = useState(false);
+
+
   const FetchProductsById = async (id) => {
     const response = await commerce.products.retrieve(id);
-    const { price, name, assets, variant_groups, description, image } =
+    const {price, name, assets, variant_groups, description, image } =
       response;
     setProductDetail({
       id,
@@ -27,14 +29,18 @@ const ProductViewDetails = () => {
       src: image.url,
       assets,
       variant_groups,
-      index: 0,
     });
   };
+
 
   useEffect(() => {
     const id = window.location.pathname.split("/");
     FetchProductsById(id);
-  });
+  
+  },[]);
+
+
+  /*Product-variants_Slider Start*/
   function plusSlides(n) {
     setSlideIndex((prev) => prev + n);
     slideShow(slideIndex + n);
@@ -47,6 +53,8 @@ const ProductViewDetails = () => {
       setSlideIndex(productDetail.assets?.length);
     }
   }
+  /*Product-variants_Slider-End*/
+  
 
   return (
     <div className={styles.product_details_and_characteristics}>
@@ -177,7 +185,7 @@ const ProductViewDetails = () => {
             soluta tenetur possimus corporis vero optio quod sed quisquam,
             dignissimos tempora architecto.
           </div>
-          <button className={styles.add_To_Basket}>
+          <button className={styles.add_To_Basket} >
             <CgShoppingCart className={styles.shopping_logo} /> Səbətə at
           </button>
         </div>

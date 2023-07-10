@@ -511,6 +511,9 @@ input:focus::placeholder {
     display: flex;
     flex-direction: column;
   }
+  html{
+    overflow-x: hidden;
+  }
 
   .product_img_container {
     width: 390px;
@@ -656,11 +659,11 @@ input:focus::placeholder {
     font-weight: 400;
     color: #828282;
   }
-  .inactive {
+  .inactiveCharacter {
     display: none;
   }
 
-  .active {
+  .activeCharacter {
     display: flex;
   }
   .comment_container {
@@ -687,7 +690,7 @@ input:focus::placeholder {
     overflow-x: hidden;
   }
   .opinion_text {
-    margin-left: 140px;
+    margin-left: 120px;
   }
   .user_name {
     background-color: #f2f2f2;
@@ -732,4 +735,5 @@ input:focus::placeholder {
     padding-bottom: 130px;
     margin-top: 30px;
   }
+  
 }

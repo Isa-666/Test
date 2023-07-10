@@ -6,7 +6,7 @@ import useFetch from "../../../hooks/useFetch";
 import { commerce } from "../../../lib/commerce";
 import MoonLoader from "react-spinners/MoonLoader";
 import GlobalStyles from '@mui/material/GlobalStyles';
-const ProductMoreSold = () => {
+const ProductMoreSold = ({customClass}) => {
   const { productsMoreSold,loading } = useFetch(commerce);
 if (loading) {
   return(
@@ -19,7 +19,7 @@ if (loading) {
 }
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${customClass}`}>
       {productsMoreSold?.map((product) => (
         <ProductItem key={product.id} product={product} {...product} />
       ))}

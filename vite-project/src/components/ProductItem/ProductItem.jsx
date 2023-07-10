@@ -9,9 +9,8 @@ const ProductItem = ({product, discounts}) => {
 
 
 
-
-
-  return (<Link className={styles.product_link_style} to={`/product-view/${product.id}`}>
+  return (
+  <Link className={styles.product_link_style} to={`/product-view/${product.id}`}>
     <div className={styles.card_container}>
     <img src={product.image?.url} alt={product.name} />
     <div className={styles.product_info_con}>

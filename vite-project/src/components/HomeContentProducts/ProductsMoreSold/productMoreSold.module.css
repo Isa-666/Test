@@ -56,6 +56,8 @@
        flex-wrap: nowrap;
     }
 
-   
+    .mobile_filter_container{
+      flex-wrap: wrap;
+    }
     
 }
